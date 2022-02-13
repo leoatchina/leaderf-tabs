@@ -19,6 +19,6 @@ function! leaderf#tabs#source(args) abort
 endfunction
 
 function! leaderf#tabs#select(line, args) abort
-    let num = a:line[0]
+    let num = split(a:line, "\t")[0]
     call feedkeys(num . 'gt')
 endfunction
